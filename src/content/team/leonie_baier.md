@@ -5,4 +5,3 @@ role: admin
 image: src/images/members/leonie_baier.png
 ---
 
-DESCRIPTION

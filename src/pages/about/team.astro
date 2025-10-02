@@ -3,10 +3,45 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 import SeoPage from "@/components/SeoPage.astro";
 import Team from "@/components/Team.astro";
+import MemberMap from "@/components/MemberMap.astro";
 ---
 
 <BaseLayout>
-  <SeoPage slot="head" title="404: Page Not Found" />
+  <SeoPage slot="head" title="GloBat Team" />
 
-  <Team />
+  <main class="py-4 sm:py-4">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section class="mt-8">
+        <div class="text-center">
+          <h2 class="mb-4 text-3xl font-bold sm:text-4xl">
+            A Global Network
+          </h2>
+          <p class="mx-auto max-w-3xl text-lg leading-relaxed">
+            We are a global community working at the intersection of bat
+            research, conservation, and artificial intelligence. Our members
+            span the globe, bringing diverse expertise and a shared interest for
+            leveraging technology to protect biodiversity. The map below
+            showcases the geographic distribution of our network.
+          </p>
+        </div>
+
+        <div class="mt-12">
+          <MemberMap />
+        </div>
+      </section>
+
+      <section class="mt-8">
+        <div class="text-center">
+          <h2 class="mb-4 text-3xl font-bold sm:text-4xl">The Core Team</h2>
+          <p class="mx-auto max-w-3xl text-lg leading-relaxed">
+            We are the organisers and facilitators of the GloBat network.
+          </p>
+        </div>
+
+        <div class="mt-12">
+          <Team />
+        </div>
+      </section>
+    </div>
+  </main>
 </BaseLayout>

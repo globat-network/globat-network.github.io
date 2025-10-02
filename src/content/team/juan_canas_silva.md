@@ -5,4 +5,3 @@ role: admin
 image: src/images/members/juan_canas.png
 ---
 
-DESCRIPTION
