@@ -1,0 +1,17 @@
+---
+import { NAV_LINKS, SITE } from "@/siteConfig.ts";
+import { NavMenu } from "@/components/NavMenu.tsx";
+---
+
+<header
+  class="relative z-10 mx-auto flex max-w-screen-lg flex-wrap items-center justify-between p-3 pb-8 font-sans sm:p-6"
+>
+  <a
+    href="/"
+    class="text-3xl font-semibold text-black sm:text-3xl dark:text-white"
+    >{SITE.title}</a
+  >
+  <nav>
+    <NavMenu links={Object.values(NAV_LINKS)} client:load />
+  </nav>
+</header>

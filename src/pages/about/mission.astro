@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+import SeoPage from "@/components/SeoPage.astro";
+import { Content as VisionContent } from "@/content/about/vision.md";
+import { Content as MissionContent } from "@/content/about/mission.md";
+import { Content as ObjectivesContent } from "@/content/about/objectives.md";
+import { Content as PrinciplesContent } from "@/content/about/principles.md";
+
+import batImage from "@/images/bats/TrachopsMaslowski-25-3.jpg";
+const headingStyles = "text-3xl md:text-4xl font-bold border-b-4 pb-2 mb-6";
+---
+
+<BaseLayout>
+  <SeoPage slot="head" title="404: Page Not Found" />
+
+  <div class="mx-auto max-w-4xl px-4 py-8">
+    <section class="mb-12">
+      <h1 class={headingStyles}>Our Mission</h1>
+      <div class="prose max-w-none">
+        <MissionContent />
+      </div>
+      <Image
+        src={batImage}
+        alt="Bat flying against a dark background"
+        class="h-auto w-full"
+      />
+    </section>
+
+    <section class="mb-12">
+      <h1 class={headingStyles}>Our Vision</h1>
+      <div class="prose max-w-none">
+        <VisionContent />
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h1 class={headingStyles}>Our Objectives</h1>
+      <div class="prose max-w-none">
+        <ObjectivesContent />
+      </div>
+    </section>
+
+    <section>
+      <h1 class={headingStyles}>Our Principles</h1>
+      <div class="prose max-w-none">
+        <PrinciplesContent />
+      </div>
+    </section>
+  </div>
+</BaseLayout>

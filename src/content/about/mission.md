@@ -1,0 +1,1 @@
+To accelerate bat conservation and research through open, inclusive, and effective collaboration. We empower teams worldwide by co-developing and openly sharing high-quality, open-source AI tools, data standards, and best practices for bat acoustic monitoring.

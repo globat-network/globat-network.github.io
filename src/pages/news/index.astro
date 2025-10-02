@@ -1,0 +1,11 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+import News from "@/components/News.astro";
+import SeoPage from "@/components/SeoPage.astro";
+---
+
+<BaseLayout>
+  <SeoPage slot="head" title="News" />
+  <News />
+</BaseLayout>

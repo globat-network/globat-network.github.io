@@ -1,0 +1,1 @@
+A world where any conservationist, researcher, or community group can easily collect and process passive acoustic data and turn it into critical ecological and conservation insights of bat activity, regardless of their budget, data availability, or technical expertise.

@@ -1,0 +1,56 @@
+---
+import { render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import type { Member } from "@/types.ts";
+
+import ExternalLink from "@/components/ExternalLink.astro";
+interface Props {
+  member: CollectionEntry<"team">;
+}
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+const { member } = Astro.props;
+const { Content } = await render(member);
+---
+
+<Card>
+  <CardHeader className="flex flex-col items-center space-y-2 text-center">
+    {
+      member.data.image && (
+        <img
+          src={member.data.image.src}
+          alt={member.data.imageAlt ?? member.data.name}
+          class="h-56 w-56 rounded-full object-cover ring-2 ring-gray-200"
+        />
+      )
+    }
+    <CardTitle className="text-lg font-semibold">{member.data.name}</CardTitle>
+    <CardDescription className="text-muted-foreground text-sm">
+      {member.data.institution}
+    </CardDescription>
+  </CardHeader>
+
+  <CardContent className="prose prose-sm text-muted-foreground text-center">
+    <Content />
+  </CardContent>
+
+  {
+    member.data.links && (
+      <CardFooter className="flex flex-wrap justify-center gap-3">
+        {Object.entries(member.data.links).map(([name, link]) => (
+          <ExternalLink href={link} class="text-sm font-medium">
+            {name}
+          </ExternalLink>
+        ))}
+      </CardFooter>
+    )
+  }
+</Card>

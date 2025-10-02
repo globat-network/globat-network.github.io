@@ -1,0 +1,18 @@
+---
+import { Image } from "astro:assets";
+import batImage from "@/images/bats/TrachopsMaslowski-5.jpg";
+---
+
+<section class="hero relative z-0">
+  <Image
+    src={batImage}
+    alt="Bat flying against a dark background"
+    class="h-auto w-full"
+  />
+  <div class="absolute inset-0 flex flex-col items-center justify-start py-24">
+    <p class="text-4xl font-bold text-white">Welcome to GloBat</p>
+  </div>
+</section>
+<section class="prose">
+  <p>Welcome to GloBat</p>
+</section>

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SeoPage from "@/components/SeoPage.astro";
+
+import { Content } from "@/content/about/membership.md";
+---
+
+<BaseLayout>
+  <SeoPage slot="head" title="About" />
+  <div class="prose">
+    <Content />
+  </div>
+</BaseLayout>
