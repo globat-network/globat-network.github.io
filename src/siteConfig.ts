@@ -45,12 +45,4 @@ export const SOCIAL_LINKS: SocialLinks = {
     label: "Email",
     href: "mailto:globat-admin@googlegroups.com",
   },
-  github: {
-    label: "GitHub",
-    href: "https://github.com/trevortylerlee",
-  },
-  twitter: {
-    label: "X (formerly Twitter)",
-    href: "https://twitter.com/boogerbuttcheek",
-  },
 };
