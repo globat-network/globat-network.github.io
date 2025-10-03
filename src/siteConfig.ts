@@ -26,10 +26,10 @@ export const NAV_LINKS: NavigationLinks = {
       team: { path: "/about/team", label: "Our Team" },
     },
   },
-  news: {
-    path: "/news",
-    label: "News",
-  },
+  // news: {
+  //   path: "/news",
+  //   label: "News",
+  // },
   contact: {
     path: "/contact",
     label: "Get Involved",

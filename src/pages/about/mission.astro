@@ -9,44 +9,64 @@ import { Content as ObjectivesContent } from "@/content/about/objectives.md";
 import { Content as PrinciplesContent } from "@/content/about/principles.md";
 
 import batImage from "@/images/bats/TrachopsMaslowski-25-3.jpg";
-const headingStyles = "text-3xl md:text-4xl font-bold border-b-4 pb-2 mb-6";
+import batImage2 from "@/images/bats/TrachopsMaslowski-5.jpg";
+const headingStyles = "text-3xl font-bold tracking-tight sm:text-4xl underline";
 ---
 
 <BaseLayout>
-  <SeoPage slot="head" title="404: Page Not Found" />
+  <SeoPage
+    slot="head"
+    title="Our Network"
+    description="Learn about the mission, vision, and principles of the GloBat network."
+  />
 
-  <div class="mx-auto max-w-4xl px-4 py-8">
-    <section class="mb-12">
-      <h1 class={headingStyles}>Our Mission</h1>
-      <div class="prose max-w-none">
-        <MissionContent />
-      </div>
-      <Image
-        src={batImage}
-        alt="Bat flying against a dark background"
-        class="h-auto w-full"
-      />
-    </section>
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+    <div class="space-y-24 md:space-y-32">
+      <section class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+        <div>
+          <Image
+            src={batImage}
+            alt="Close-up of a bat in its natural habitat."
+            class="w-full object-cover"
+          />
+        </div>
+        <div>
+          <h2 class={headingStyles}>Our Mission</h2>
+          <div class="prose prose-lg mt-6 max-w-none">
+            <MissionContent />
+          </div>
+        </div>
+      </section>
 
-    <section class="mb-12">
-      <h1 class={headingStyles}>Our Vision</h1>
-      <div class="prose max-w-none">
-        <VisionContent />
-      </div>
-    </section>
+      <section class="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
+        <div>
+          <h2 class={headingStyles}>Our Vision</h2>
+          <div class="prose prose-lg mt-6 max-w-none">
+            <VisionContent />
+          </div>
+        </div>
+        <div>
+          <Image
+            src={batImage2}
+            alt="Close-up of a bat in its natural habitat."
+            class="w-full object-cover"
+          />
+        </div>
+      </section>
 
-    <section class="mb-12">
-      <h1 class={headingStyles}>Our Objectives</h1>
-      <div class="prose max-w-none">
-        <ObjectivesContent />
-      </div>
-    </section>
+      <section class="text-center">
+        <h2 class={headingStyles}>Our Objectives</h2>
+        <div class="prose prose-lg mx-auto mt-6 max-w-3xl">
+          <ObjectivesContent />
+        </div>
+      </section>
 
-    <section>
-      <h1 class={headingStyles}>Our Principles</h1>
-      <div class="prose max-w-none">
-        <PrinciplesContent />
-      </div>
-    </section>
+      <section class="text-center">
+        <h2 class={headingStyles}>Working Principles</h2>
+        <div class="prose prose-lg mx-auto mt-6 max-w-3xl">
+          <PrinciplesContent />
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>

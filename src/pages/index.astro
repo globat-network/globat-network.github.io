@@ -1,18 +1,53 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
 
-import Introduction from "@/components/Introduction.astro";
 import News from "@/components/News.astro";
 import SeoPage from "@/components/SeoPage.astro";
+import batImage from "@/images/bats/TrachopsMaslowski-5.jpg";
 ---
 
 <BaseLayout>
   <SeoPage slot="head" />
-  <div>
-    <Introduction />
-    <hr
-      class="border-muted-text dark:border-dark-muted-text my-12 border-[0.5px] opacity-10 dark:opacity-15"
-    />
-    <News />
+
+  <div class="py-16 text-center sm:py-16">
+    <div class="mx-auto max-w-4xl px-4">
+      <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
+        Advancing Bat Conservation Through Artificial Intelligence
+      </h1>
+
+      <p class="mt-6 text-lg leading-8">
+        GloBat is a scientific collaboration network accelerating the
+        development and application of AI tools for bat acoustic monitoring and
+        research. We bring together a diverse, global community of researchers,
+        technologists, and conservationists to establish new standards and drive
+        innovation in the field.
+      </p>
+
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a
+          href="/contact/membership"
+          class="rounded-md border border-transparent bg-zinc-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-zinc-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+        >
+          Become a Member
+        </a>
+        <a href="/about/mission" class="text-sm leading-6 font-semibold">
+          Learn more <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="mt-10">
+        <Image
+          src={batImage}
+          alt="Bat flying against a dark background"
+          class="w-full rounded-md object-cover ring-1 ring-zinc-900/10"
+        />
+      </div>
+    </div>
+
+    <!-- <hr -->
+    <!--   class="border-muted-text dark:border-dark-muted-text my-12 border-[0.5px] opacity-10 dark:opacity-15" -->
+    <!-- /> -->
+    <!-- <News /> -->
   </div>
 </BaseLayout>

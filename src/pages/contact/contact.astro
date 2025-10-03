@@ -1,9 +1,13 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SeoPage from "@/components/SeoPage.astro";
+
+import { Content } from "@/content/about/contact.md";
 ---
 
 <BaseLayout>
-  <SeoPage slot="head" title="About" />
-  <div>About</div>
+  <SeoPage slot="head" title="Contact" />
+  <div class="prose container w-full">
+    <Content />
+  </div>
 </BaseLayout>
