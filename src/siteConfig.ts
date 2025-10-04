@@ -8,7 +8,7 @@ export const SITE: SiteConfiguration = {
   title: "GloBat",
   description:
     "Scientific network accelerating AI for bat acoustic monitoring.",
-  href: "https://globat.github.io",
+  href: "https://globat-network.github.io",
   author: "GloBat Team",
   locale: "en-GB",
 };

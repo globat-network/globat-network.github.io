@@ -12,7 +12,7 @@ export default defineConfig({
       theme: "dark-plus",
     },
   },
-  site: "https://globat.github.com",
+  site: "https://globat-network.github.com",
   vite: {
     plugins: [tailwindcss()],
   },
