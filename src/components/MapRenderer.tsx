@@ -62,7 +62,7 @@ export default function MapRenderer({ counts }: MapProps) {
       const name = getName(shape.id);
       const regionData = counts[name];
 
-      const color = regionData ? colorScale(regionData) : "black";
+      const color = regionData ? "grey" : "black";
 
       return (
         <path
