@@ -78,12 +78,12 @@ export default function MapRenderer({ counts }: MapProps) {
 
   if (!dimensions.width) {
     return (
-      <div ref={containerRef} style={{ width: "100%", height: "400px" }} />
+      <div className="p-0" ref={containerRef} style={{ width: "100%", height: "600px" }} />
     );
   }
 
   return (
-    <div ref={containerRef} style={{ width: "100%", height: "100%" }}>
+    <div className="p-0" ref={containerRef} style={{ width: "100%", height: "100%" }}>
       <svg width={dimensions.width} height={dimensions.height}>
         {allSvgPaths}
       </svg>

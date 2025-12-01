@@ -27,6 +27,7 @@ function parseCountry(country: string): string {
     UK: "United Kingdom",
     USA: "United States",
     Türkiye: "Turkey",
+    "Vietnam": "Viet Nam",
   };
 
   return country_mapping[country] || country;
