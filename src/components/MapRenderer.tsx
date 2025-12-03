@@ -2,7 +2,6 @@
 
 import * as d3 from "d3";
 import { useEffect, useRef, useState } from "react";
-import { FeatureCollection } from "geojson";
 import { geoData, numData } from "@/data/geo";
 
 type MapProps = {
@@ -45,10 +44,6 @@ export default function MapRenderer({ counts }: MapProps) {
     return () => observer.disconnect();
   }, []); // Empty dependency array means this runs once on mount
 
-  var colorScale = d3.scaleLinear<number, string>(
-    [1, 20],
-    ["lightgrey", "blue"],
-  );
 
   const projection = d3
     .geoMercator()
@@ -62,15 +57,13 @@ export default function MapRenderer({ counts }: MapProps) {
       const name = getName(shape.id);
       const regionData = counts[name];
 
-      const color = regionData ? "grey" : "black";
+      const className = regionData > 0 ? "fill-white" : "fill-neutral-500";
 
       return (
         <path
           key={shape.id}
           d={geoPathGenerator(shape)}
-          stroke="lightGrey"
-          strokeWidth={0.5}
-          fill={color}
+          className={className}
           fillOpacity={1}
         />
       );
@@ -78,13 +71,17 @@ export default function MapRenderer({ counts }: MapProps) {
 
   if (!dimensions.width) {
     return (
-      <div className="p-0" ref={containerRef} style={{ width: "100%", height: "600px" }} />
+      <div ref={containerRef} style={{ width: "100%", height: "600px" }} />
     );
   }
 
   return (
-    <div className="p-0" ref={containerRef} style={{ width: "100%", height: "100%" }}>
-      <svg width={dimensions.width} height={dimensions.height}>
+    <div ref={containerRef} style={{ width: "100%", height: "100%" }}>
+      <svg
+        width={dimensions.width}
+        height={dimensions.height}
+        className="stroke-neutral-500"
+      >
         {allSvgPaths}
       </svg>
     </div>
